@@ -8,6 +8,6 @@ public class StepQuit : MonoBehaviour
 {
     public void QuitGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Scene/MainMenu");
     }
 }

@@ -8,7 +8,7 @@ public class Quit2 : MonoBehaviour
 
     public void QuitGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene("Scene/MainMenu");
     }
 
 }

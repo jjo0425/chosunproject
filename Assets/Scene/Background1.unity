@@ -169,7 +169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 32958150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a235b9d0943e24c2ea55950da9b7f7d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 309310d70fbef48ae8a323028c537ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &109369557
@@ -255,7 +255,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 32958152}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Quit3, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:

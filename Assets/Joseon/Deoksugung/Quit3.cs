@@ -7,6 +7,6 @@ public class Quit3 : MonoBehaviour
 {
     public void QuitGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        SceneManager.LoadScene("Scene/BackgroundStep");
     }
 }
