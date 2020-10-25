@@ -1,18 +1,21 @@
 ﻿<Properties StartupConfiguration="{B6A68F5D-D4B0-8AB2-332E-08BE3B582460}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Joseon/Deoksugung/Quit3.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Character/ARTapToPlaceObject.cs">
     <Files>
-      <File FileName="Assets/BackgroundStep.cs" Line="7" Column="2" />
-      <File FileName="Assets/StepQuit.cs" />
-      <File FileName="Assets/Joseon/Deoksugung/Quit3.cs" Line="13" Column="1" />
-      <File FileName="Assets/Joseon/Gyeongbokgung/Quit2.cs" />
-      <File FileName="Assets/CI.cs" />
-      <File FileName="Assets/MainMeun.cs" />
+      <File FileName="Assets/CI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Character/ARTapToPlaceObject.cs" Line="26" Column="7" />
+      <File FileName="Assets/onoff.cs" Line="22" Column="23" />
+      <File FileName="Assets/Character/CAnimation.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="조선" expanded="True">
-            <Node name="Assets" expanded="True" selected="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Character" expanded="True">
+                <Node name="ARTapToPlaceObject.cs" selected="True" />
+              </Node>
+              <Node name="Scene" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -20,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eaa26363-127d-4f82-b366-d527f26401ea" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9c1a4cc8-d303-4a2c-82a0-10b25e4c2a21" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
