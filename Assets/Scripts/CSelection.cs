@@ -9,6 +9,8 @@ public class CSelection : MonoBehaviour
     [SerializeField] private Button nextButton;
 
 
+    public UnityEngine.UI.Text onOffButnLabel;
+
     /// <summary>
     /// 캐릭터 리스트
     /// </summary>
@@ -21,12 +23,20 @@ public class CSelection : MonoBehaviour
 
     private int currentCharacter;
     public bool isVisible = true;
-        
+
+    private void Awake()
+    {
+        onOffButnLabel.text = "보이기";
+        SelectCharacter(0);
+        if (isVisible == true) SetVisibleToggle();
+    }
+
     public void SetVisibleToggle()
     {
         if (isVisible == true) // 꺼주는 행동
         {
-            foreach(var item in characterList)
+            onOffButnLabel.text = "보이기";
+            foreach (var item in characterList)
             {
                 item.SetActive(false);
             }
@@ -37,17 +47,11 @@ public class CSelection : MonoBehaviour
         }
         else if (isVisible == false) // 켜주는 행동
         {
+            onOffButnLabel.text = "숨기기";
             SelectCharacter(currentCharacter);
         }
 
         isVisible = !isVisible;
-    }
-
-
-    private void Awake()
-    {
-        SelectCharacter(0);
-        if (isVisible == true) SetVisibleToggle();
     }
 
     private void SelectCharacter(int _index)
@@ -67,7 +71,7 @@ public class CSelection : MonoBehaviour
     }
     public void ChangeCharacter(int _change)
     {
-        currentCharacter += _change; 
-            SelectCharacter(currentCharacter);
+        currentCharacter += _change;
+        SelectCharacter(currentCharacter);
     }
 }

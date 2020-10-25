@@ -1,36 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.Experimental.XR;
 using System;
+using UnityEngine.EventSystems;
 
 public class ARTapToPlaceObject : MonoBehaviour
 {
     public GameObject objectToPlace;
     public GameObject placementIndicator;
     public Camera cam;
+    public Button _onoffBtn;
+    public CSelection selection;
 
     private ARRaycastManager manager;
     private Pose placementPose;
     private bool placementPoseIsValid = false;
 
+
     void Start()
     {
         manager = FindObjectOfType<ARRaycastManager>();
-        PlaceOdject();
+        _onoffBtn.interactable = false;
     }
 
     void Update()
     {
         UpdatePlacementIndicator();
         UpdatePlacementPose();
+        if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId) == false)
+        {
+            PlaceObject();
+        }
     }
 
-    private void PlaceOdject()
+    private void PlaceObject()
     {
-        objectToPlace.transform.position = placementPose.position;
-        objectToPlace.transform.rotation = placementPose.rotation;
+        if (selection.isVisible == false) selection.SetVisibleToggle();
+        objectToPlace.transform.position = placementIndicator.transform.position;
+        objectToPlace.transform.rotation = placementIndicator.transform.rotation;
+        _onoffBtn.interactable = true;
     }
 
     private void UpdatePlacementIndicator()
