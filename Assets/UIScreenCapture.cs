@@ -55,15 +55,14 @@ public class UIScreenCapture : MonoBehaviour
             var bytes = m_LastCameraTexture.EncodeToPNG();
             NativeGallery.SaveImageToGallery(bytes, "Josun", $"SaveCapture_{System.DateTime.Now.ToString("yyyyMMdd_hhmmss")}.png");
         }
-        _captureRoutine = null;
 
-        textLabel.text = $"이미지가 저장되었습니다.\r\n SaveCapture_{System.DateTime.Now.ToString("YYYYMMDD_hhmmss")}.png";
+        textLabel.text = $"이미지가 저장되었습니다.\r\n SaveCapture_{System.DateTime.Now.ToString("yyyyMMdd_hhmmss")}.png";
         foreach (var item in deActiveObjects)
         {
             item.SetActive(_stateDictionary[item.GetInstanceID()]);
         }
 
-        yield return null;
+        yield return new WaitForSeconds(0.5f);
         textBg.gameObject.SetActive(true);
         textLabel.gameObject.SetActive(true);
         for (float a = 1; a > 0;)
